@@ -1,0 +1,32 @@
+{
+  "default": {
+    "dryRun": false,
+    "paths": ["resources/features/**/*.feature"],
+    "require": [
+      "resources/step-definitions/**/*.ts",
+      "resources/support/**/*.ts"
+    ],
+    "requireModule": ["ts-node/register"],
+    "format": [
+      "progress-bar",
+      "pretty",
+      "usage",
+      "json:reports/cucumber-report.json",
+      "html:reports/html-report/cucumber-report.html",
+      "usage-json:reports/cucumber-usage-report.json",
+      "junit:reports/cucumber-report.xml"
+    ],
+    "formatOptions": {
+      "html": {
+        "externalAttachments": true,
+        "scenarioTimestamp": true,
+        "theme": "bootstrap",
+        "metadata": {
+          "browser": "Chrome 92",
+          "platform": "Windows 10",
+          "environment": "Staging"
+        }
+      }
+    }
+  }
+}
